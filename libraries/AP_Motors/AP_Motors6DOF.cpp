@@ -176,8 +176,16 @@ void AP_Motors6DOF::setup_motors(motor_frame_class frame_class, motor_frame_type
         break;
 
     case SUB_FRAME_CUSTOM:
-        // Put your custom motor setup here
-        //break;
+        _frame_class_string = "CUSTOM_NUROV_23";
+        add_motor_raw_6dof(AP_MOTORS_MOT_1, 0.425812f, 0.639788f, -0.6397875f, 0.514f, 0.696f, -0.514f, 1);
+        add_motor_raw_6dof(AP_MOTORS_MOT_2, -0.425812f, 0.639788f, 0.6397875f, 0.514f, 0.696f, 0.514f, 2);
+        add_motor_raw_6dof(AP_MOTORS_MOT_3, -0.425812f, -0.639788f, 0.6397875f, -0.514f, 0.696f, 0.514f, 3);
+        add_motor_raw_6dof(AP_MOTORS_MOT_4, 0.425812f, -0.639788f, -0.6397875f, -0.514f, 0.696f, -0.514f, 4);
+        add_motor_raw_6dof(AP_MOTORS_MOT_5, 0.425812f, 0.639788f, -0.6397875f, -0.514f, 0.696f, 0.514f, 5);
+        add_motor_raw_6dof(AP_MOTORS_MOT_6, -0.425812f, 0.639788f, 0.6397875f, -0.514f, 0.696f, -0.514f, 6);
+        add_motor_raw_6dof(AP_MOTORS_MOT_7, -0.425812f, -0.639788f, 0.6397875f, 0.514f, 0.696f, -0.514f, 7);
+        add_motor_raw_6dof(AP_MOTORS_MOT_8, 0.425812f, -0.639788f, -0.6397875f, 0.514f, 0.696f, 0.514f, 8);
+        break;
 
     case SUB_FRAME_SIMPLEROV_3:
         _frame_class_string = "SIMPLEROV_3";
